@@ -1,0 +1,20 @@
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskContainer{
+    margin: 1em 0;
+    color: rgb(218, 218, 218);
+    width: 60%;
+    aspect-ratio: 5/2;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskWrapper{
+    background-color: rgb(44, 44, 73);
+    margin: .5em;
+}
