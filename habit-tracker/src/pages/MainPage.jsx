@@ -6,11 +6,15 @@ function MainPage(){
         <div id="tilte">Habit Tracker</div>
         <div className="taskContainer">
             <div className="taskWrapper">
-                <input type="checkbox"></input>code
-                <div className="taskDesc">goated project that helps you navigate through websites very </div>
+                <div className="taskName">
+                    <input type="checkbox"></input>code
+                </div> 
+                <div className="taskDesc"> hey ajdfsuij fasduijfadiojfioads djfioajfoi djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj djfioajfoi ajoidsfj  ajoidsfj aoisdfjioADHFnpa dsnhfuihaduifohna douihfnouidahfuiaohfduiahifuoadhfiuoashioufhdaoi</div>
             </div>
             <div className="taskWrapper">
-                <input type="checkbox"></input>run
+                <div className="taskName">
+                    <input type="checkbox"></input>run
+                </div>
                 <div className="taskDesc">fudsnmvucxnvjuunmjbnuihbguidbjj</div>
             </div>
             
@@ -18,6 +22,7 @@ function MainPage(){
         <hr className="hr-lines"/>
         {<SubmitGoals/>}
     </div>
+    
 }
 
 export default MainPage

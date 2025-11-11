@@ -32,7 +32,7 @@
     background-color: var(--task-wrapper-color);
     margin: .5em;
     width: 30%;
-    height: 40%;
+    aspect-ratio: 4/3;
     border-radius: 5%;
     font-size: clamp(30px,5%,100px);
     color: white;
@@ -41,8 +41,12 @@
 .taskDesc{
     font-size: clamp(20px,3.4%,70px);
     margin: .4em;
-    overflow: hidden;
+    
     color: var(--task-desc-color);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
 }
 
 #tilte{
@@ -56,4 +60,8 @@
 .hr-lines{
     border-color: var(--hr-lines-color);
     width: 75%;
+}
+
+.taskName{
+    margin: .3em;
 }

@@ -1,4 +1,18 @@
 #submit-container{
     color: white;
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.tasks-inputs{
+    margin-bottom: .5em;
+    width: 100%;
+    font-size: clamp(19px,10%,100px);
+}
+
+#submit-goals-text{
+    font-size: clamp(23px,13%,100px);
 }
