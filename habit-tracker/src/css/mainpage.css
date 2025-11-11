@@ -1,20 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root{
+    --task-desc-color:rgb(224, 224, 224);
+    --task-name-color: rgb(218, 218, 218);
+    --task-container-color:rgb(22, 22, 34);
+    --task-wrapper-color:rgb(44, 44, 73);
+    --hr-lines-color:rgb(165, 165, 165);
+}   
+
 .mainContainer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .taskContainer{
     margin: 1em 0;
-    color: rgb(218, 218, 218);
-    width: 60%;
-    aspect-ratio: 5/2;
-    background-color: bisque;
+    color: var(--task-name-color);
+    width: 70%;
+    aspect-ratio: 5/4;
+    background-color: var(--task-container-color);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
 }
 
 .taskWrapper{
-    background-color: rgb(44, 44, 73);
+    background-color: var(--task-wrapper-color);
     margin: .5em;
+    width: 30%;
+    height: 40%;
+    border-radius: 5%;
+    font-size: clamp(30px,5%,100px);
+    color: white;
+}
+
+.taskDesc{
+    font-size: clamp(20px,3.4%,70px);
+    margin: .4em;
+    overflow: hidden;
+    color: var(--task-desc-color);
+}
+
+#tilte{
+    color: white;
+    font-size: clamp(80px,12%,200px);
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hr-lines{
+    border-color: var(--hr-lines-color);
+    width: 75%;
 }
