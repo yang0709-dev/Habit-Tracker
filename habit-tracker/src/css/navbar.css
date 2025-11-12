@@ -1,0 +1,36 @@
+#tilte{
+    color: white;
+    font-size: clamp(30px,12%,200px);
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.icons{
+    color: white;
+}
+
+.icons:hover .deco-line{
+    animation: extend .5s linear 1 forwards;
+}
+
+.icons:hover{
+    cursor: pointer;
+}
+
+@keyframes extend {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+}
+
+.deco-line{
+    padding: 1px 0;
+    color: white;
+    background-color: white;
+    width: 0%;
+}

@@ -7,10 +7,10 @@ function SubmitGoals() {
             Submit Your Goals
         </div>
         <div className="tasks-inputs">
-            Task Name: <input type="text"></input>
+            Name: <input type="text"></input>
         </div>
         <div className="tasks-inputs">
-            Task Description: <input type="text"></input>
+            Description: <input type="text"></input>
         </div>
     </div>
   );
