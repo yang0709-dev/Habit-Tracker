@@ -1,3 +1,7 @@
+:root{
+    --submit-bg:rgb(138, 138, 138);
+}
+
 #submit-container{
     color: white;
     display: flex;
@@ -11,8 +15,21 @@
     margin-bottom: .5em;
     width: 100%;
     font-size: clamp(19px,10%,100px);
+    position: relative;
 }
 
 #submit-goals-text{
     font-size: clamp(23px,13%,100px);
+}
+
+#submit-button{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#submit-button:hover{
+    background-color: var(--submit-bg);
+    cursor: pointer;
 }

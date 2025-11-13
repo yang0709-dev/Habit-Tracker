@@ -8,15 +8,18 @@
 
 .icons{
     color: white;
+    margin: .4em;
 }
 
 .icons:hover .deco-line{
-    animation: extend .5s linear 1 forwards;
+    animation: extend .3s linear 1 forwards;
 }
 
 .icons:hover{
     cursor: pointer;
 }
+
+
 
 @keyframes extend {
     0%{width: 0%;}
@@ -33,4 +36,13 @@
     color: white;
     background-color: white;
     width: 0%;
+}
+
+.icon-wrapper{
+    float: right;
+    display: flex;
+    position: absolute;
+    right: 2%;
+    justify-content: center;
+    align-items: center;
 }

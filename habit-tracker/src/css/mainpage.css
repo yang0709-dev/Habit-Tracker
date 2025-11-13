@@ -36,6 +36,7 @@
     border-radius: 5%;
     font-size: clamp(30px,5%,100px);
     color: white;
+    position: relative;
 }
 
 .taskDesc{
@@ -57,4 +58,12 @@
 
 .taskName{
     margin: .3em;
+}
+
+.trashIcon{
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    line-height: 0;
+    font-size: 20px;
 }

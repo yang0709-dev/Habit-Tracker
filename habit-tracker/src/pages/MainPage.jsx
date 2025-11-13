@@ -11,12 +11,14 @@ function MainPage(){
                 <div className="taskName">
                     <input type="checkbox"></input>code
                 </div> 
+                <div className="trashIcon">🗑️</div>
                 <div className="taskDesc"></div>
             </div>
             <div className="taskWrapper">
                 <div className="taskName">
                     <input type="checkbox"></input>run
                 </div>
+                <div className="trashIcon">🗑️</div>
                 <div className="taskDesc">fudsnmvucxnvjuunmjbnuihbguidbjj</div>
             </div>
             
