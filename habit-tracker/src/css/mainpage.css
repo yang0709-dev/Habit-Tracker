@@ -9,6 +9,7 @@
 }   
 
 .mainContainer{
+    /* 把主頁上的東西置中 並上下擺放 */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,8 +22,11 @@
     width: 70%;
     aspect-ratio: 5/4;
     background-color: var(--task-container-color);
-    display: flex;
-    flex-direction: row;
+
+    /* 自動排列tasks */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,40%));
+
     justify-content: center;
     align-items: center;
     border-radius: 5%;
@@ -31,11 +35,15 @@
 .taskWrapper{
     background-color: var(--task-wrapper-color);
     margin: .5em;
-    width: 30%;
-    aspect-ratio: 4/3;
+    height: 30%;
+    aspect-ratio: 3/2;
     border-radius: 5%;
     font-size: clamp(30px,5%,100px);
     color: white;
+
+    min-width: 200px;
+    min-height: 132px;
+
     position: relative;
 }
 
@@ -58,12 +66,26 @@
 
 .taskName{
     margin: .3em;
+    overflow-x: auto;
+    display: flex;
 }
 
 .trashIcon{
+    width: min(50px,12%);
+    font-size: clamp(7px,80%,30px);
+    aspect-ratio: 1/1;
+
+    /* 把emoji放到div中間 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     position: absolute;
-    right: 5%;
-    top: 10%;
-    line-height: 0;
-    font-size: 20px;
+    top: 4%;
+    right: 2.5%;
+}
+
+.trashIcon:hover{
+    color: rgb(228, 5, 5);
+    cursor: pointer;
 }
