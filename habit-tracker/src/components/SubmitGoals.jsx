@@ -11,12 +11,12 @@ function SubmitGoals() {
 
   async function handleSubmit(){
     // assigning new key to the keysDB
-    let key = await get_Keys()
-    key+=1
-    await set_Keys(key)
+    let tasks_key = await get_Keys()
+    tasks_key+=1
+    await set_Keys(tasks_key);
 
     // save the [name,desc] to the tasksDB
-    await set_Tasks(tasks,key)
+    await set_Tasks(tasks,tasks_key);
   }
   
 

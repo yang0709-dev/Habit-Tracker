@@ -1,17 +1,20 @@
-import openDB from 'idb'
+import {openDB} from 'idb';
 
-const taskDB = openDB('keysDB','1',{
+const keysDB = openDB('keysDB',1,{
     upgrade(db){
-        db.createObjectStore('keys')
+        if(!db.objectStoreNames.contains('keys')){
+            const store = db.createObjectStore('keys',{keyPath:'id'});
+            store.put(0)
+        }
     }
-})
+});
 
 // get
 export async function get_Keys(){
-    return (await taskDB).get('keys',0)
+    return (await keysDB).get('keys',0);
 } 
 
 // set
 export async function set_Keys(val){
-    return (await taskDB).set('keys',val,0)
+    return (await keysDB).put('keys',{key:0,value:val});
 }
