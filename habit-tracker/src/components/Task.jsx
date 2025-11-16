@@ -1,9 +1,6 @@
 import { useState } from "react"
 
-function Task({task_key}){
-    function remove_task(){
-        localStorage.removeItem(task_key)
-    }
+function Task({task_key,remove}){
 
     const metaData = localStorage.getItem(task_key).split(',')
 
@@ -13,7 +10,7 @@ function Task({task_key}){
                 <div className="taskName">
                     <input type="checkbox"></input>{metaData[0]}
                 </div> 
-                <div className="trashIcon" onClick={()=>remove_task()}>X</div>
+                <div className="trashIcon" onClick={()=>remove(task_key)}>X</div>
                 <div className="taskDesc">{metaData[1]}</div>
             </div>
         </>
