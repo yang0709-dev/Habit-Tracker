@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { createContext } from "react";
 export const taskContext = createContext(["", ""]);
 
-function SubmitGoals() {
+function SubmitGoals({addTask}) {
   const [tasks, setTasks] = useState(["", ""]);
 
 
@@ -24,6 +24,7 @@ function SubmitGoals() {
 
   function set_Tasks(key,val){
     localStorage.setItem(key,val)
+    addTask(key)
   }
 
   

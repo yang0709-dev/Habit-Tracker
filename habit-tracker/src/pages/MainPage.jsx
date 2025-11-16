@@ -11,7 +11,7 @@ function MainPage() {
 
   useEffect(()=>{
     setTasks(Object.keys(localStorage))
-  },[tasks])
+  },[])
 
   function handleDelete(k){
     localStorage.removeItem(k)
@@ -30,7 +30,7 @@ function MainPage() {
       {<CompletionRates />}
 
       <hr className="hr-lines" />
-      {<SubmitGoals />}
+      {<SubmitGoals  addTask={(key) => setTasks(t=>[...t,key])}/>}
     </div>
   );
 }
