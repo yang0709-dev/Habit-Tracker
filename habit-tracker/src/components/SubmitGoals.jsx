@@ -6,6 +6,8 @@ export const taskContext = createContext(["", ""]);
 function SubmitGoals() {
   const [tasks, setTasks] = useState(["", ""]);
 
+
+  // 處理localStorage裡面的"key"裡面的數值
   if (localStorage.getItem("key") === null) {
     localStorage.setItem("key", 0);
   }
@@ -18,20 +20,33 @@ function SubmitGoals() {
     return localStorage.getItem("key");
   }
 
+
+
+  function set_Tasks(key,val){
+    localStorage.setItem(key,val)
+  }
+
+  
+
   async function handleSubmit() {
     // assigning new key to the keysDB
     const taskName = document.getElementById('taskName')
     const taskDesc = document.getElementById('taskDesc')
     if (taskName.value != '' && taskDesc.value != ''){
-      console.log(' fdsadfsdafsdfas')
+
+      // 預設是存string
       let tasks_key = Number(get_Keys());
       tasks_key += 1;
+
+      // 把新的key存到localStorage, 之後才能根據這個key存新東西
       set_Keys(tasks_key);
+      
+
+      // save the [name,desc] to localStorage
+      set_Tasks(tasks_key,tasks)
+
       taskName.value = ''
       taskDesc.value = ''
-
-      // save the [name,desc] to the tasksDB
-      await set_Tasks(tasks, tasks_key);
     }
     
   }
@@ -39,7 +54,7 @@ function SubmitGoals() {
   return (
     <div id="submit-container">
       <div id="submit-goals-text">Submit Your Goals</div>
-      <form>
+      <form id="submit-form">
         <div className="tasks-inputs">
           Name:{" "}
           <input
@@ -58,7 +73,7 @@ function SubmitGoals() {
             onChange={(e) => (tasks[1] = e.target.value)}
           ></input>
         </div>
-        <button type="button" id="submit-button" onClick={(e) => {handleSubmit();}}>
+        <button type="button" id="submit-button" onClick={() => {handleSubmit();}}>
           Submit
         </button>
       </form>

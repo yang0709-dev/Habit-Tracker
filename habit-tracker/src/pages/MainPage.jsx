@@ -6,11 +6,13 @@ import { taskContext } from "../components/SubmitGoals";
 import Task from "../components/Task";
 
 function MainPage() {
-
+  console.log(Object.entries(localStorage))
   return (
     <div className="mainContainer">
       <div className="taskContainer">
-        {<Task name="hi" desc="saying hello"/>}
+        {Object.entries(localStorage).map(([k,_])=>{
+          return (<Task key={k} task_key={k}/>)
+        }) }
       </div>
       <hr className="hr-lines" />
       {<CompletionRates />}
