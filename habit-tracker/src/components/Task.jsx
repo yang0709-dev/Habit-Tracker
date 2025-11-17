@@ -1,8 +1,10 @@
-import { useState } from "react"
+import { useState,useContext } from "react"
+import { CompletionContext } from "./CompletionContextDummy"
 
 function Task({task_key,remove}){
     const metaData = localStorage.getItem(task_key).split(',')
     const [checked,setChecked] = useState(false)
+    const {rate,setRate} = useContext(CompletionContext)
     function handleCheck(e){
         if (localStorage.getItem('checked') === null){
             localStorage.setItem('checked',0)
@@ -13,12 +15,18 @@ function Task({task_key,remove}){
         if (e.target.checked===false){
             setChecked(false)
             localStorage.setItem('checked',checkedCount-1)
+            let completed = Number(localStorage.getItem("checked"));
+            let total = Number(Object.entries(localStorage).length);
+            setRate(completed/total*100);
         }
 
         // checking the checkbox
         else{
             setChecked(true)
             localStorage.setItem('checked',checkedCount+1)
+            let completed = Number(localStorage.getItem("checked"));
+            let total = Number(Object.entries(localStorage).length);
+            setRate(completed/total*100)
         }
     }
 
@@ -28,6 +36,9 @@ function Task({task_key,remove}){
             localStorage.setItem('checked',checkedCount-1)
         }
         remove(task_key)
+        let completed = Number(localStorage.getItem("checked"));
+        let total = Number(Object.entries(localStorage).length);
+        setRate(completed/total*100)
     }
 
     return(

@@ -1,11 +1,13 @@
 import "../css/submitgoals.css";
 import { useState, useContext } from "react";
 import { createContext } from "react";
+import { CompletionContext } from "./CompletionContextDummy";
 export const taskContext = createContext(["", ""]);
+
 
 function SubmitGoals({addTask}) {
   const [tasks, setTasks] = useState(["", ""]);
-
+  const {rate,setRate} = useContext(CompletionContext)
 
   // 處理localStorage裡面的"key"裡面的數值
   if (localStorage.getItem("key") === null) {
@@ -14,6 +16,9 @@ function SubmitGoals({addTask}) {
 
   function set_Keys(val) {
     localStorage.setItem("key", val);
+    let completed = Number(localStorage.getItem("checked"));
+    let total = Number(Object.entries(localStorage).length);
+    setRate(completed/total*100)
   }
 
   function get_Keys() {

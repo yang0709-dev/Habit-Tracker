@@ -1,8 +1,9 @@
 import "../css/completion.css";
-import React,{ useEffect,useState,createContext } from "react";
+import React,{ useEffect,useState,useContext } from "react";
+import { CompletionContext } from "./CompletionContextDummy";
 
 function CompletionRates() {
-
+    const {rate,setRate} = useContext(CompletionContext)
     const [total,setTotal] = useState(0)
     const [complete,setComplete] = useState(0)
 
@@ -26,7 +27,7 @@ function CompletionRates() {
   return (
     <div id="completion-container">
       <div id="completion-text">Completion Rate: </div>
-      <div>{complete/total*100}%</div>
+      <div>{rate}%</div>
     </div>
   );
 }
