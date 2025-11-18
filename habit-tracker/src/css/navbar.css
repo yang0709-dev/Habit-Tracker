@@ -1,3 +1,7 @@
+:root{
+    --bg-color: rgb(25, 25, 48);;
+}
+
 #tilte{
     color: white;
     font-size: clamp(30px,12%,200px);
@@ -6,10 +10,6 @@
     font-style: normal;
 }
 
-.icons{
-    color: white;
-    margin: .4em;
-}
 
 .icons:hover .deco-line{
     animation: extend .3s linear 1 forwards;
@@ -29,6 +29,7 @@
 #navbar{
     display: flex;
     align-items: center;
+    background-color: var(--bg-color);
 }
 
 .deco-line{
@@ -45,4 +46,10 @@
     right: 2%;
     justify-content: center;
     align-items: center;
+}
+
+.text{
+    color: white;
+    margin: .4em;
+    text-decoration: none;
 }

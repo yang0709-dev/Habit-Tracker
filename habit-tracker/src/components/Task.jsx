@@ -16,7 +16,7 @@ function Task({task_key,remove}){
             setChecked(false)
             localStorage.setItem('checked',checkedCount-1)
             let completed = Number(localStorage.getItem("checked"));
-            let total = Number(Object.entries(localStorage).length);
+            let total = Number(Object.entries(localStorage).length-1);
             setRate(completed/total*100);
         }
 
@@ -25,7 +25,7 @@ function Task({task_key,remove}){
             setChecked(true)
             localStorage.setItem('checked',checkedCount+1)
             let completed = Number(localStorage.getItem("checked"));
-            let total = Number(Object.entries(localStorage).length);
+            let total = Number(Object.entries(localStorage).length-1);
             setRate(completed/total*100)
         }
     }
@@ -37,7 +37,7 @@ function Task({task_key,remove}){
         }
         remove(task_key)
         let completed = Number(localStorage.getItem("checked"));
-        let total = Number(Object.entries(localStorage).length);
+        let total = Number(Object.entries(localStorage).length-1);
         setRate(completed/total*100)
     }
 

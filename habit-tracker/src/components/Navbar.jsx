@@ -1,25 +1,33 @@
-import "../css/navbar.css"
+import "../css/navbar.css";
+import { Link } from "react-router-dom";
 
-function Navbar(){
-    return <div id="navbar">
-        <div id="tilte">Habit Tracker</div>
-        <div className="icon-wrapper">
-            <div className="icons">
-                <div className="text">
-                    History
-                </div>
-                <div className="deco-line"></div>
-            </div>
-                <div className="icons">
-                    <div className="text">
-                        Charts
-                    </div>
-                <div className="deco-line"></div>
-            </div>
+function Navbar() {
+  return (
+    <div id="navbar">
+      <div id="tilte">Habit Tracker</div>
+      <div className="icon-wrapper">
+        <div className="icons">
+          <Link className="text" to={"/"}>
+            Home
+          </Link>
+          <div className="deco-line"></div>
         </div>
-        
-    </div> 
-    
+
+        <div className="icons">
+          <Link className="text" to={"/History"}>
+            History
+          </Link>
+          <div className="deco-line"></div>
+        </div>
+        <div className="icons">
+          <Link className="text" to={"/Graphs"}>
+            Charts
+          </Link>
+          <div className="deco-line"></div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;

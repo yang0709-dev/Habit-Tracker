@@ -17,7 +17,7 @@ function SubmitGoals({addTask}) {
   function set_Keys(val) {
     localStorage.setItem("key", val);
     let completed = Number(localStorage.getItem("checked"));
-    let total = Number(Object.entries(localStorage).length);
+    let total = Number(Object.entries(localStorage).length-1);
     setRate(completed/total*100)
   }
 
@@ -50,6 +50,10 @@ function SubmitGoals({addTask}) {
 
       // save the [name,desc] to localStorage
       set_Tasks(tasks_key,tasks)
+
+      let completed = Number(localStorage.getItem("checked"));
+      let total = Number(Object.entries(localStorage).length-1);
+      setRate(completed/total*100)
 
       taskName.value = ''
       taskDesc.value = ''

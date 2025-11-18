@@ -1,0 +1,81 @@
+:root{
+    --task-container-color:rgb(22, 22, 34);
+    --bar-color1:#ffadad;
+    --bar-color1:#ffd6a5;
+    --bar-color1:#fdffb6;
+    --bar-color1:#caffbf;
+    --bar-color1:#9bf6ff;
+    --bar-color1:#a0c4ff;
+    --bar-color1:#bdb2ff;
+}
+
+#GraphsContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#GraphWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-width: 350px;
+    background-color: var(--task-container-color);
+    margin: 2em;
+    aspect-ratio: 5/3;
+    border-radius: 5%;
+    flex-direction: column;
+}
+
+#Graph{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: end;
+}
+
+.bar{
+    width: calc(100%/7);
+    height: 20%;
+    border: 2px solid black;
+    border-radius: 10%;
+}
+#bar1{
+    background-color: #ffadad;
+}
+
+#bar2{
+    background-color: #ffd6a5;
+}
+
+#bar3{
+    background-color: #fdffb6;
+}
+
+#bar4{
+    background-color: #caffbf;
+}
+
+#bar5{
+    background-color: #9bf6ff;
+}
+
+#bar6{
+    background-color: #a0c4ff;
+    
+}
+
+#bar7{
+    background-color: #bdb2ff;
+}
+
+.date{
+    color: white;
+    width: calc(100%/7);
+}
+
+#Dates{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}

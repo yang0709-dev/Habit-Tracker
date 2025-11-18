@@ -1,5 +1,5 @@
 import "../css/completion.css";
-import React,{ useEffect,useState,useContext } from "react";
+import { useEffect,useState,useContext } from "react";
 import { CompletionContext } from "./CompletionContextDummy";
 
 function CompletionRates() {
@@ -20,7 +20,6 @@ function CompletionRates() {
     useEffect(()=>{
         updateRates()
         window.addEventListener('storage',updateRates)
-        const rateContext = React.createContext(complete/total*100)
         return () => window.removeEventListener('storage',updateRates)
     },[])
 
