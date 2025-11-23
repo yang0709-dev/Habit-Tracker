@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --transparent-layer-color: rgba(255, 255, 255, 0.37);
+    --end-day-hover-color:rgb(138, 138, 138);
+    --confirm-wrapper-bg:rgb(255, 255, 255);
+    --exclamation-bg:rgb(255, 217, 0);
+    --confirm-btn-bg: rgb(26, 206, 26);
+    --confirm-hover-bg:rgb(38, 179, 38);
+    --cancel-btn-bg: rgb(211, 72, 72);
+    --cancel-hover-bg:rgb(175, 61, 61);
+}
+
+#end-day-button{
+    margin: 1rem;
+    padding: .5rem;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+#end-day-button:hover{
+    background-color: var(--end-day-hover-color);
+    cursor: pointer;
+}
+
+
+
+#transparent-layer{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: var(--transparent-layer-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+#confirm-wrapper{
+    background-color: var(--confirm-wrapper-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 35%;
+    aspect-ratio: 2/1;
+    border: 2px solid black;
+}
+
+#exclamation{
+    margin: .2em;
+    background-color: var(--exclamation-bg);
+    border-radius: 50%;
+    height: 20%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    color: white;
+}
+
+#confirm-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#ending{
+    font-family: "Archivo Black", sans-serif;
+    margin: .7em;
+}
+
+#are{
+    font-family: "Montserrat", sans-serif;
+}
+
+#confirm-buttons{
+    display: flex;
+}
+
+.yes-no-btn{
+    margin: 2em;
+    border-radius: 5px;
+    padding: .5em;
+    border: 1px solid black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+#confirm-btn{
+    background-color: var(--confirm-btn-bg);
+}
+
+#confirm-btn:hover{
+    background-color: var(--confirm-hover-bg);
+    cursor: pointer;
+    
+}
+
+#cancel-btn{
+    background-color: var(--cancel-btn-bg);
+}
+
+#cancel-btn:hover{
+    background-color: var(--cancel-hover-bg);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  #confirm-wrapper {
+    width: 60%;
+    aspect-ratio: 4/3;
+  }
+  #exclamation{
+    height: 20%;
+    aspect-ratio: 1/1;
+  }
+
+}

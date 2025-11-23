@@ -14,13 +14,13 @@ function Graphs() {
           <div id="bar7" className="bar"></div>
         </div>
         <div id="Dates">
-          <div id="date1" className="date">adfjiadfsj</div>
-          <div id="date2" className="date">LMFLKdfadf</div>
-          <div id="date3" className="date">dfasdaf</div>
-          <div id="date4" className="date">cvcbv</div>
-          <div id="date5" className="date">bcvbcbvc</div>
-          <div id="date6" className="date">cbvvbcb</div>
-          <div id="date7" className="date">uytyu</div>
+          <div id="date1" className="date-info">adfjiadfsj</div>
+          <div id="date2" className="date-info">LMFLKdfadf</div>
+          <div id="date3" className="date-info">dfasdaf</div>
+          <div id="date4" className="date-info">cvcbv</div>
+          <div id="date5" className="date-info">bcvbcbvc</div>
+          <div id="date6" className="date-info">cbvvbcb</div>
+          <div id="date7" className="date-info">uytyu</div>
         </div>
       </div>
     </div>

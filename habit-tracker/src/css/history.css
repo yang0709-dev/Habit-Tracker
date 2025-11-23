@@ -67,13 +67,7 @@
 
 }
 
-.history-info *{
-    pointer-events: none;
-}
 
-.name{
-
-}
 
 .history-name{
     display: flex;
@@ -94,7 +88,7 @@
 
 .date{
     margin-left:2em;
-    font-size: clamp(10px,60%,1000px);
+    font-size: clamp(1px,1vw,1000px);
     background-color: var(--date-circle-color);
     height: 80%;
     display: flex;

@@ -2,6 +2,7 @@ import "../css/mainpage.css";
 import SubmitGoals from "../components/SubmitGoals";
 import { useState, useEffect } from "react";
 import CompletionContextDummy from "../components/CompletionContextDummy";
+import EndDay from "../components/EndDay";
 
 function MainPage() {
   console.log(Object.entries(localStorage));
@@ -22,6 +23,8 @@ function MainPage() {
 
       <hr className="hr-lines" />
       {<SubmitGoals addTask={(key) => setTasks((t) => [...t, key])} />}
+      <hr className="hr-lines" />
+      <EndDay/>
     </div>
   );
 }

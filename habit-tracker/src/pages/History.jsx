@@ -5,7 +5,7 @@ export default function History() {
   return (
     <div id="history-container">
       <div id="history-wrapper">
-        <div className="history" onMouseOver={(e) => handleHover(e)}>
+        <div className="history" onMouseMove={(e) => handleHover(e)}>
             <div className="date">
                 Nov 19
             </div>
@@ -21,7 +21,7 @@ export default function History() {
             </div>
         </div>
 
-        <div className="history" onMouseEnter={(e) => handleHover(e)}>
+        <div className="history" onMouseMove={(e) => handleHover(e)}>
             <div className="date">
                 Nov 20
             </div>
