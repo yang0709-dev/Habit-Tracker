@@ -22,7 +22,8 @@ function Graphs() {
     <div id="GraphsContainer">
       <div id="GraphWrapper">
         <div id="Graph">
-          {rates.map((r,i)=>{
+          {/* 確保只會render 7個Bar */}
+          {rates.slice(0,7).map((r,i)=>{
             const rate = r[0]
             const id = "bar" + (i+1)
             const date = dates[i]     

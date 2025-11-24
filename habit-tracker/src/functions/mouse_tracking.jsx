@@ -2,7 +2,6 @@ export function handleHover(e){
     const history = e.currentTarget
     const history_info = history.querySelector(".history-info")
     // console.log(history_info)
-    const rect = history.getBoundingClientRect();
     
     document.body.onpointermove = event =>{
         const {clientX,clientY} = event
