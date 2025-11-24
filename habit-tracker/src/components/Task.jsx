@@ -3,6 +3,8 @@ import { CompletionContext } from "./CompletionContextDummy"
 
 function Task({task_key,remove}){
     const metaData = localStorage.getItem(task_key).split(',')
+    const taskName = metaData[0].slice(2,metaData[0].length-1)
+    const taskDesc = metaData[1].slice(1,metaData[1].length-2)
     const [checked,setChecked] = useState(false)
     const {rate,setRate} = useContext(CompletionContext)
     function handleCheck(e){
@@ -45,10 +47,10 @@ function Task({task_key,remove}){
         <>
             <div className="taskWrapper">
                 <div className="taskName">
-                    <input type="checkbox" className="task-checkbox" onClick={(e)=>handleCheck(e)}></input>{metaData[0]}
+                    <input type="checkbox" className="task-checkbox" onClick={(e)=>handleCheck(e)}></input>{taskName}
                 </div> 
                 <div className="trashIcon" onClick={()=>handleClose()}>X</div>
-                <div className="taskDesc">{metaData[1]}</div>
+                <div className="taskDesc">{taskDesc}</div>
             </div>
         </>
     )
