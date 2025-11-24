@@ -25,34 +25,12 @@ function Graphs() {
           {rates.map((r,i)=>{
             const rate = r[0]
             const id = "bar" + (i+1)
-            console.log(rate,id)      
-            return <Bar key={id} id={id} rate={rate}/>
+            const date = dates[i]     
+            return <Bar key={id} id={id} rate={rate} date={date}/>
           })}
           
         </div>
-        <div id="Dates">
-          <div id="date1" className="date-info">
-            adfjiadfsj
-          </div>
-          <div id="date2" className="date-info">
-            LMFLKdfadf
-          </div>
-          <div id="date3" className="date-info">
-            dfasdaf
-          </div>
-          <div id="date4" className="date-info">
-            cvcbv
-          </div>
-          <div id="date5" className="date-info">
-            bcvbcbvc
-          </div>
-          <div id="date6" className="date-info">
-            cbvvbcb
-          </div>
-          <div id="date7" className="date-info">
-            uytyu
-          </div>
-        </div>
+        
       </div>
     </div>
   );
