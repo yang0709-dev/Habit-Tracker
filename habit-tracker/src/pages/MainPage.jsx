@@ -5,7 +5,7 @@ import CompletionContextDummy from "../components/CompletionContextDummy";
 import EndDay from "../components/EndDay";
 
 function MainPage() {
-  console.log(Object.entries(localStorage));
+  // console.log(Object.entries(localStorage));
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {

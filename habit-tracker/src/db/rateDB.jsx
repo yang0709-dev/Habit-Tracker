@@ -19,3 +19,14 @@ export async function set(key, val) {
 export async function keys() {
   return (await rateDB).getAllKeys("rate");
 }
+
+export async function all(){
+  return (await rateDB).getAll('rate')
+}
+
+export async function entries(){
+  return (await rateDB).getAll('rate').then(async vals=>{
+    const keys = await (await rateDB).getAllKeys('rate')
+    keys.map((k,i)=>({key:k,value:vals[i]}))
+  })
+}

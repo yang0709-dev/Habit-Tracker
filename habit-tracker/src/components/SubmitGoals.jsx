@@ -40,7 +40,7 @@ function SubmitGoals({addTask}) {
     const taskDesc = document.getElementById('taskDesc')
     if (taskName.value != '' && taskDesc.value != ''){
 
-      // 預設是存string
+      // 取得localStorage存取用的key
       let tasks_key = Number(get_Keys());
       tasks_key += 1;
 
@@ -49,7 +49,10 @@ function SubmitGoals({addTask}) {
       
 
       // save the [name,desc] to localStorage
-      set_Tasks(tasks_key,tasks)
+      // 先把tasks JSON Stringify(localStorage不能直接存array)
+      let t = JSON.stringify(tasks)
+      console.log(t)
+      set_Tasks(tasks_key,t)
 
       let completed = Number(localStorage.getItem("checked"));
       let total = Number(Object.entries(localStorage).length-1);

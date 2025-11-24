@@ -1,5 +1,5 @@
 import "../css/endday.css";
-import { get,set,keys } from "../db/rateDB";
+import { set } from "../db/rateDB";
 
 export default function EndDay() {
   function handleCancel() {
@@ -22,8 +22,24 @@ export default function EndDay() {
     let completed = Number(localStorage.getItem("checked"));
     let total = Number(Object.entries(localStorage).length-1);
     let rate = (completed/total)*100
+
+    let res = []
+    let tasks = []
+
+    Object.entries(localStorage).forEach(([k,v])=>{
+        if (k != 'checked' && k!='key'){
+          let taskName = JSON.parse(v)[0]
+          console.log(taskName)
+
+          tasks.push(taskName)
+        }
+    })
     
-    await set(d,rate)
+    
+    res=[rate,...tasks]
+
+
+    await set(d,res)
 
     const trans = document.getElementById("transparent-layer")
     trans.style.visibility = "hidden"
