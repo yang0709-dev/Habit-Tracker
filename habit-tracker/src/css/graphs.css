@@ -1,12 +1,5 @@
 :root{
     --task-container-color:rgb(22, 22, 34);
-    --bar-color1:#ffadad;
-    --bar-color1:#ffd6a5;
-    --bar-color1:#fdffb6;
-    --bar-color1:#caffbf;
-    --bar-color1:#9bf6ff;
-    --bar-color1:#a0c4ff;
-    --bar-color1:#bdb2ff;
 }
 
 #GraphsContainer{

@@ -6,7 +6,7 @@ export const taskContext = createContext(["", ""]);
 
 
 function SubmitGoals({addTask}) {
-  const [tasks, setTasks] = useState(["", ""]);
+  const [tasks, _] = useState(["", ""]);
   const {rate,setRate} = useContext(CompletionContext)
 
   // 處理localStorage裡面的"key"裡面的數值

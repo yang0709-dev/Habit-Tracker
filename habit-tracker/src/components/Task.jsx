@@ -2,17 +2,26 @@ import { useState,useContext } from "react"
 import { CompletionContext } from "./CompletionContextDummy"
 
 function Task({task_key,remove}){
-    const metaData = localStorage.getItem(task_key).split(',')
-    const taskName = metaData[0].slice(2,metaData[0].length-1)
-    const taskDesc = metaData[1].slice(1,metaData[1].length-2)
+    // data = "["Name","Desc"]" (JSON.Stringify)
+    const data = JSON.parse(localStorage.getItem(task_key))
+    
+    const taskName = data[0]
+    const taskDesc = data[1]
+
+
     const [checked,setChecked] = useState(false)
-    const {rate,setRate} = useContext(CompletionContext)
+    const {_,setRate} = useContext(CompletionContext)
+
     function handleCheck(e){
+
+        // 初始化localStorage裡面的checked
         if (localStorage.getItem('checked') === null){
             localStorage.setItem('checked',0)
         }
 
         let checkedCount = Number(localStorage.getItem('checked'))
+
+        
         // unchecking the checkbox
         if (e.target.checked===false){
             setChecked(false)

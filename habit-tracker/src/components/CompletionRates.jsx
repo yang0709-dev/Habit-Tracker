@@ -3,7 +3,7 @@ import { useEffect,useState,useContext } from "react";
 import { CompletionContext } from "./CompletionContextDummy";
 
 function CompletionRates() {
-    const {rate,setRate} = useContext(CompletionContext)
+    const {rate,_} = useContext(CompletionContext)
     const [total,setTotal] = useState(0)
     const [complete,setComplete] = useState(0)
 
@@ -20,12 +20,14 @@ function CompletionRates() {
     useEffect(()=>{
         updateRates()
         window.addEventListener('storage',updateRates)
+
+        // 元件不再渲染就移除EventListener
         return () => window.removeEventListener('storage',updateRates)
     },[])
 
   return (
     <div id="completion-container">
-      <div id="completion-text">Completion Rate: </div>
+      <div id="completion-text">Completed: </div>
       <div>{rate}%</div>
     </div>
   );

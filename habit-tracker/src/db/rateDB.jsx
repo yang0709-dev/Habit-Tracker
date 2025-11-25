@@ -30,3 +30,5 @@ export async function entries(){
     keys.map((k,i)=>({key:k,value:vals[i]}))
   })
 }
+
+// doc: https://www.npmjs.com/package/idb

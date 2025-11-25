@@ -28,8 +28,11 @@ export default function EndDay() {
 
     Object.entries(localStorage).forEach(([k,v])=>{
         if (k != 'checked' && k!='key'){
+
+          // v="["Name","Desc"]" (JSON.Stringify)
+          // JSON.parse用來把這種stringify的string轉成array
           let taskName = JSON.parse(v)[0]
-          console.log(taskName)
+
 
           tasks.push(taskName)
         }
@@ -41,6 +44,7 @@ export default function EndDay() {
 
     await set(d,res)
 
+    // 顯示確定界面
     const trans = document.getElementById("transparent-layer")
     trans.style.visibility = "hidden"
   }

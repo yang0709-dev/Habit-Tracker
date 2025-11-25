@@ -113,6 +113,7 @@
     cursor: pointer;
 }
 
+/* 手機 */
 @media screen and (min-width: 480px) and (max-width: 768px) {
   #confirm-wrapper {
     width: 60%;

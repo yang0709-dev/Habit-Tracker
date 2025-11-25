@@ -6,9 +6,10 @@ body{
     background-color: black;
 }
 
+
+/* 調整網站的預設滾軸 */
 ::-webkit-scrollbar{
     width: 15px;
-    color: rgb(0, 0, 65);
     height: 5px;
 }
 

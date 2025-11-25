@@ -6,7 +6,7 @@ import EndDay from "../components/EndDay";
 
 function MainPage() {
   // console.log(Object.entries(localStorage));
-  const [tasks, setTasks] = useState([]);
+  const [_, setTasks] = useState([]);
 
   useEffect(() => {
     setTasks(Object.keys(localStorage));
@@ -22,6 +22,8 @@ function MainPage() {
       </CompletionContextDummy>
 
       <hr className="hr-lines" />
+
+      {/* 把原本的tasks展開後加上key addTask函式 */}
       {<SubmitGoals addTask={(key) => setTasks((t) => [...t, key])} />}
       <hr className="hr-lines" />
       <EndDay/>

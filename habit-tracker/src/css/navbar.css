@@ -11,6 +11,8 @@
 }
 
 
+
+/* hover到icon上面的時候 deco-line會變長 */
 .icons:hover .deco-line{
     animation: extend .3s linear 1 forwards;
 }
@@ -19,12 +21,12 @@
     cursor: pointer;
 }
 
-
-
 @keyframes extend {
     0%{width: 0%;}
     100%{width: 100%;}
 }
+
+
 
 #navbar{
     display: flex;

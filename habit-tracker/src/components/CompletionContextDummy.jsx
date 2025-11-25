@@ -9,6 +9,7 @@ function CompletionContextDummy(){
     function handleDelete(k) {
         localStorage.removeItem(k);
 
+        // 把現有的tasks更新 (對每個task檢查是不是k(要刪除的))
         setTasks((tasks) => tasks.filter((keys) => keys !== k));
     }
     

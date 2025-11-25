@@ -8,6 +8,9 @@ function Graphs() {
   const [dates, setDates] = useState([]);
 
   useEffect(() => {
+    // 處理promise(還沒拿到的資料)
+
+
     keys().then(k=>{setDates(k)})
 
     // [rate, taskName, taskDesc]
